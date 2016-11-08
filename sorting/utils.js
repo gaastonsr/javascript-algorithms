@@ -17,14 +17,26 @@ function isSorted(array) {
     let previous = array[0];
 
     return tail.every(element => {
+        const result = isLessThan(previous, element);
         previous = element;
-        return element > previuos;
+        return result;
     });
+}
+
+function generateInputOfSize(size) {
+    const input = new Array(size);
+
+    for (let i = 0; i < size; i++) {
+        input[i] = Math.random();
+    }
+
+    return input;
 }
 
 module.exports = {
     isLessThan,
     exchange,
     arrayToString,
-    isSorted
+    isSorted,
+    generateInputOfSize
 };

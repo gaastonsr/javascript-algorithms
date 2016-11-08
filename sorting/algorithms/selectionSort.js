@@ -1,4 +1,4 @@
-const { isLessThan, exchange } = require('./utils');
+const { isLessThan, exchange } = require('../utils');
 
 function selectionSort(array) {
     for (let i = 0; i < array.length; i++) {
