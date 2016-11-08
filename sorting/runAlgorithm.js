@@ -2,13 +2,13 @@ const algorithms = require('./algorithms');
 
 function runAlgorithm(algorithm, input) {
     const startTime = process.hrtime();
-    const sortingFn = algorithms[algorithm.toUpperCase()]
+    const sortingFunction = algorithms[algorithm.toUpperCase()]
 
-    if (sortingFn === undefined) {
+    if (sortingFunction === undefined) {
         throw new Error(`${algorithm} is an invalid algorithm`);
     }
 
-    sortedInput = sortingFn(input);
+    sortedInput = sortingFunction(input);
     const duration = process.hrtime(startTime);
 
     return duration;
