@@ -8,7 +8,7 @@ function runAlgorithm(algorithm, input) {
         throw new Error(`${algorithm} is an invalid algorithm`);
     }
 
-    sortedInput = sortingFunction(input);
+    sortingFunction(input);
     const duration = process.hrtime(startTime);
 
     return duration;

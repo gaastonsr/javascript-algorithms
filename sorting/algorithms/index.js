@@ -1,5 +1,6 @@
 module.exports = {
     BUBBLE: require('./bubbleSort'),
     SELECTION: require('./selectionSort'),
-    INSERTION: require('./insertionSort')
+    INSERTION: require('./insertionSort'),
+    TOPDOWNMERGE: require('./topDownMergeSort')
 };
