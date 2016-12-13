@@ -2,7 +2,7 @@ const { merge } = require('../utils');
 
 function topDownMergeSort(array) {
     debugger;
-    sort(array, array.slice(), 0, array.length - 1);
+    sort(array, new Array(array.length), 0, array.length - 1);
 };
 
 function sort(array, aux, start, end) {
