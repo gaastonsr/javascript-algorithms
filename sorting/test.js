@@ -2,7 +2,7 @@
 
 const runAlgorithm = require('./runAlgorithm');
 const { formatExecutionTime } = require('./formatter');
-const { isSorted, arrayToString, generateInputOfSize } = require('./utils');
+const { isSorted, generateInputOfSize } = require('./utils');
 
 const args = process.argv.slice(2);
 
@@ -15,7 +15,7 @@ function testAlgorithm(algorithm, inputSize = '100000') {
     const executionTime = runAlgorithm(algorithm, input);
     console.log(`Execution time: ${formatExecutionTime(executionTime)}`);
 
-    console.log('Testing if input is sorted...')
+    console.log('Testing if input is sorted...');
     console.log(isSorted(input) ? 'SUCCESS' : 'FAILURE');
 }
 
