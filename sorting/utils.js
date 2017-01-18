@@ -2,6 +2,16 @@ function isLessThan(x, y) {
     return x < y;
 }
 
+function compare(a, b) {
+    if (isLessThan(b, a)) {
+        return 1;
+    } else if (isLessThan(a, b)) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
 function exchange(array, i, j) {
     const temporary = array[i];
     array[i] = array[j];
@@ -70,6 +80,7 @@ function shuffle(array) {
 
 module.exports = {
     isLessThan,
+    compare,
     exchange,
     arrayToString,
     isSorted,
