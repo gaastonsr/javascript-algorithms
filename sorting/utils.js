@@ -54,11 +54,26 @@ function merge(array, aux, start, middle, end) {
     }
 }
 
+// Fisher–Yates shuffle
+function shuffle(array) {
+    let i = array.length - 1;
+    let j = 0;
+    let temp = null;
+
+    for (; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
+    }
+}
+
 module.exports = {
     isLessThan,
     exchange,
     arrayToString,
     isSorted,
     generateInputOfSize,
-    merge
+    merge,
+    shuffle
 };
