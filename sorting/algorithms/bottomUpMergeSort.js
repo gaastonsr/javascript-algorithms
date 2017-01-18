@@ -1,8 +1,8 @@
 const { merge } = require('../utils');
 
 function bottomUpMergeSort(array) {
-    const aux = new Array(array.length);
     const N = array.length;
+    const aux = new Array(N);
 
     for (let size = 1; size < N; size = size + size) {
         for (let low = 0; low < N - size; low += size + size) {
@@ -13,6 +13,5 @@ function bottomUpMergeSort(array) {
         }
     }
 }
-
 
 module.exports = bottomUpMergeSort;
