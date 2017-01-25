@@ -5,5 +5,6 @@ module.exports = {
     TOPDOWNMERGE: require('./topDownMergeSort'),
     BOTTOMUPMERGE: require('./bottomUpMergeSort'),
     QUICK: require('./quickSort'),
-    QUICK3WAY: require('./quick3WaySort')
+    QUICK3WAY: require('./quick3WaySort'),
+    HEAP: require('./heapSort')
 };
